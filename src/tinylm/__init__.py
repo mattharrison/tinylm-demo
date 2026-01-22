@@ -65,13 +65,13 @@ class Markov:
         tokens = self._tokenize(txt)
 
         if not tokens:
-            raise ValueError("context must be non-empty")
+            raise ValueError("txt must be non-empty")
 
         table_idx = len(tokens) - 1
 
         if table_idx < 0 or table_idx >= len(self.tables):
             raise KeyError(
-                f"Context length {len(tokens)} is outside the model's range (1-{self.size})."
+                f"length {len(tokens)} is outside the model's range (1-{self.size})."
             )
 
         table = self.tables[table_idx]
@@ -81,7 +81,7 @@ class Markov:
         if not next_counts:
             if default is not None:
                 return default
-            raise KeyError(f"Context '{key}' not found.")
+            raise KeyError(f"'{key}' not found.")
 
         options = []
         for token, count in next_counts.items():
