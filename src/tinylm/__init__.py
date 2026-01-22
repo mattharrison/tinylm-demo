@@ -30,6 +30,12 @@ class Markov:
         return self._join_fn(tokens)
 
     def get_table(self, txt: str, n: int) -> Dict[str, Dict[str, int]]:
+        """
+        Build a transition table from a training string.
+        >>> m = Markov('')
+        >>> m.get_table("xyxz", n=1)
+        {'x': {'y': 1, 'z': 1}, 'y': {'x': 1}}
+        """
         tokens = self._tokenize(txt)
         results: Dict[str, Dict[str, int]] = {}
 
@@ -43,6 +49,19 @@ class Markov:
         return results
 
     def predict(self, txt: str, *, default: str | None = None) -> str:
+        """
+        Predict the next character after `txt`.
+
+        >>> m = Markov("abc")
+        >>> m.predict("a")
+        'b'
+        >>> m.predict("b")
+        'c'
+        >>> m.predict("z")
+        Traceback (most recent call last):
+          ...
+        KeyError: 'z not found'
+        """
         tokens = self._tokenize(txt)
 
         if not tokens:
