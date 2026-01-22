@@ -1,10 +1,5 @@
-# tinylm (Chapter 15)
+# tinylm 
 
-This project exists to demonstrate property-based testing with Hypothesis.
+This project exists to demonstrate features from the [Effective Testing](https://store.metasnake.com/testing).
 
-Run the suite:
-
-```console
-$ uv run pytest -q
-```
 
