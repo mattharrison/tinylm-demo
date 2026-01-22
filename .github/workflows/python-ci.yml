@@ -25,4 +25,4 @@ jobs:
         run: uv sync --dev
 
       - name: Run pytest
-        run: uv run pytest code/tests/task1 code/tests/task2
+        run: uv run pytest 
