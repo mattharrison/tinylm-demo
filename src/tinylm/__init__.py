@@ -81,7 +81,7 @@ class Markov:
         if not next_counts:
             if default is not None:
                 return default
-            raise KeyError(f"'{key}' not found.")
+            raise KeyError(f"{key} not found.")
 
         options = []
         for token, count in next_counts.items():
