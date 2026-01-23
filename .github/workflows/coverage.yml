@@ -23,7 +23,7 @@ jobs:
       - uses: actions/checkout@v4
 
       - name: Install everything, run the tests, produce the .coverage file
-        run: make test # This is the part where you put your own test command
+        run: uv run pytest --cov=tinylm 
 
       - name: Coverage comment
         id: coverage_comment
