@@ -29,3 +29,5 @@ line-length = 88
 [tool.ruff.lint]
 select = ["E", "F", "I"]
 
+[tool.coverage.run]
+relative_files = true
