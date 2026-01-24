@@ -22,7 +22,7 @@ dev = [
 ]
 
 [tool.pytest.ini_options]
-addopts = ["--doctest-modules", "-v", "--ty"]
+addopts = ["--doctest-modules", "--doctest-glob=*.md", "-v", "--ty"]
 
 [tool.ruff]
 line-length = 88
