@@ -4,6 +4,7 @@ A tiny Markov predictor used throughout this book.
 
 from __future__ import annotations
 
+import pathlib
 import random
 from collections.abc import Sequence
 from typing import Callable, Dict
@@ -93,6 +94,12 @@ class Markov:
 class WordMarkov(Markov):
     def __init__(self, txt: str, size: int = 1) -> None:
         super().__init__(txt, size=size, tokenize=str.split, join=" ".join)
+
+
+def train_from_path(path: str | bytes | pathlib.Path) -> Markov:
+    with open(path, encoding="utf-8") as f:
+        txt = f.read()
+    return Markov(txt)
 
 
 __all__ = ["Markov", "WordMarkov"]

@@ -1,1 +1,6 @@
-.hypothesis/*
+.hypothesis/
+*.pyc
+.pytest_cache/
+.coverage/
+htmlcov/
+dist/
