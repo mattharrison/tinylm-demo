@@ -1,7 +1,7 @@
 import pytest
-
 from hypothesis import Verbosity, given, settings
 from hypothesis import strategies as st
+
 from tinylm import Markov, WordMarkov
 
 

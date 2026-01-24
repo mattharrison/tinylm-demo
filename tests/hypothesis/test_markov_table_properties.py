@@ -1,8 +1,9 @@
 from __future__ import annotations
 
-import tinylm
 from hypothesis import given, settings
 from hypothesis import strategies as st
+
+import tinylm
 
 
 def _transition_count(table: dict[str, dict[str, int]]) -> int:
