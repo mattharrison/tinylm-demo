@@ -13,4 +13,3 @@ def test_from_regex_fullmatch_generates_2_to_4_digits(code: str) -> None:
 def test_text_alphabet_and_size_constraints(token: str) -> None:
     assert 5 <= len(token) <= 8
     assert set(token) <= {"a", "b", "🐍"}
-

@@ -10,7 +10,9 @@ def ordered_pairs(draw):
 
 
 @given(pair=ordered_pairs())
-def test_composite_strategy_can_generate_dependent_values(pair: tuple[int, int]) -> None:
+def test_composite_strategy_can_generate_dependent_values(
+    pair: tuple[int, int],
+) -> None:
     left, right = pair
     assert left <= right
 
