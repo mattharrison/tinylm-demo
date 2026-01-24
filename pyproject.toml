@@ -3,7 +3,7 @@ name = "tinylm"
 version = "0.1.0"
 description = "Tiny project used to demonstrate Hypothesis property-based testing"
 readme = "README.md"
-requires-python = ">=3.9"
+requires-python = ">=3.10"
 dependencies = []
 
 [build-system]
@@ -16,12 +16,13 @@ dev = [
     "prek>=0.3.0",
     "pytest>=8.4.2",
     "pytest-cov>=7.0.0",
+    "pytest-ty>=0.1.4",
     "ruff>=0.14.14",
     "zizmor>=1.16.3",
 ]
 
 [tool.pytest.ini_options]
-addopts = ["--doctest-modules", "-v"]
+addopts = ["--doctest-modules", "-v", "--ty"]
 
 [tool.ruff]
 line-length = 88
